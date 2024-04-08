@@ -25,4 +25,4 @@ const PokemonCard = ( {name, image, types, id, favorite} ) => {
     )
 }
 
-export default PokemonCard
+export default PokemonCard     

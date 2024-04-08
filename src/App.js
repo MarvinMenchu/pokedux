@@ -9,8 +9,9 @@ import { getPokemonsWithDetails, setLoading } from './actions'
 import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
-  const pokemons = useSelector(state => state.pokemons)
-  const loading = useSelector(state => state.loading)
+  const pokemons = useSelector(state => state.get('pokemons').toJS())
+  const loading = useSelector(state => state.get('loading'))
+
   const dispatch = useDispatch() 
   //console.log(pokemons)
   //const [pokemons, setPokemons] = useState([])
