@@ -10,14 +10,13 @@ import { useSelector, useDispatch, shallowEqual } from 'react-redux'
 import { fetchPokemonsWithDetails } from './slices/dataSlice'
 
 function App() {
-  const pokemons = useSelector((state) => state.data.pokemons, shallowEqual
+  const pokemons = useSelector((state) => state.data.pokemonsFiltered || state.data.pokemons, shallowEqual
     // .getIn(['data', 'pokemons'], shallowEqual)
   )//.toJS()
   //const loading = false;
   const loading = useSelector(state => state.ui.loading)
     // .getIn(['ui', 'loading'])
   // )
-
 
   /** 
    * Comparacion estricta === revisa si es exactamente el mismo objeto
